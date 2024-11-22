@@ -9,7 +9,7 @@ app.use(cors());
 
 app.get('/api/balance-sheet', async (req: Request, res: Response) => {
   try {
-    const response = await axios.get('http://localhost:3000/api.xro/2.0/Reports/BalanceSheet');
+    const response = await axios.get('http://money-service:3000/api.xro/2.0/Reports/BalanceSheet');
     res.status(200).json(response.data);
   } catch (error) {
     console.error('Error fetching balance sheet:', error);
